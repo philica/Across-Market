@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappeframework.com/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="frappe">
+
+
+    <meta name="title" content="QTN-00007">
+    <meta name="language" content="en">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="QTN-00007">
+    <meta name="twitter:title" content="QTN-00007">
+    <meta name="twitter:card" content="summary">
+
+
+    <title>QTN-00007</title>
+
+
+    <link rel="shortcut icon" href="assets/erpnext/images/erpnext-favicon.svg" type="image/x-icon">
+
+
+    <link rel="canonical" href="http://127.0.0.1:8000/order">
+    <link type="text/css" rel="stylesheet" href="assets/across_marketplace/css/website.bundle.EGCK2XQ2.css">
+    <link type="text/css" rel="stylesheet" href="assets/across_marketplace/css/erpnext-web.bundle.5YSL3CYW.css">
+
+
+   
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-light navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="http://127.0.0.1:8000/">Across Technologies</a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+                <span>
+                    <svg class="icon icon-lg">
+                        <use href="#icon-menu"></use>
+                    </svg>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="mr-auto navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/contact">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/blog">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/all-products">
+                            Products
+                        </a>
+                    </li>
+                </ul>
+                <ul class="ml-auto navbar-nav">
+                    <li class="shopping-cart cart-icon" style="display: none;">
+                        <a class="nav-link" href="http://127.0.0.1:8000/cart">
+                            <svg class="icon icon-lg">
+                                <use href="#icon-assets"></use>
+                            </svg>
+
+                        </a>
+                    </li>
+                    <div class="d-block d-lg-none">
+                        <hr>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/project">
+                                Projects
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/quotations">
+                                Quotations
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/orders">
+                                Orders
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/invoices">
+                                Invoices
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/shipments">
+                                Shipments
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/issues">
+                                Issues
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/addresses">
+                                Addresses
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/timesheets">
+                                Timesheets
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/newsletters">
+                                Newsletter
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/material-requests">
+                                Material Request
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/book_appointment">
+                                Appointment Booking
+                            </a>
+                        </li>
+                        <hr>
+                    </div>
+                    <!-- post login tools -->
+                    <li class="nav-item dropdown logged-in" data-label="website-post-login" id="website-post-login"
+                        style="">
+                        <a class="nav-link nav-avatar" data-toggle="dropdown" href="#">
+                            <span class="user-image-wrapper"><span class="avatar avatar-medium filterable"
+                                    title="philii" data-filter="_assign,like,%null%">
+                                    <div class="avatar-frame standard-image"
+                                        style="background-color: var(--orange-avatar-bg); color: var(--orange-avatar-color)">
+                                        p
+                                    </div>
+                                </span></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu"><a class="dropdown-item"
+                                href="http://127.0.0.1:8000/me" rel="nofollow">
+                                My Account
+                            </a><a class="dropdown-item" href="http://127.0.0.1:8000/?cmd=web_logout" rel="nofollow">
+                                Log out
+                            </a><a class="dropdown-item switch-to-desk" href="http://127.0.0.1:8000/app">Switch To
+                                Desk</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-login-area" href="http://127.0.0.1:8000/login"
+                            style="display: none;">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group mb-0 hide" id="language-switcher">
+                <select class="form-control"></select>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="row" id="page-order" data-path="quotations/QTN-00007">
+            <div class="sidebar-column col-sm-2">
+
+
+
+
+
+
+
+                <div class="web-sidebar">
+
+                    <div class="sidebar-items">
+                        <ul class="list-unstyled">
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/project" class="">
+                                    Projects
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/quotations" class="">
+                                    Quotations
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/orders" class="">
+                                    Orders
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/invoices" class="">
+                                    Invoices
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/shipments" class="">
+                                    Shipments
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/issues" class="">
+                                    Issues
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/addresses" class="">
+                                    Addresses
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/timesheets" class="">
+                                    Timesheets
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/newsletters" class="">
+                                    Newsletter
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/material-requests" class="">
+                                    Material Request
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/book_appointment" class="">
+                                    Appointment Booking
+                                </a>
+                            </li>
+
+                        </ul>
+
+
+                        <ul class="list-unstyled">
+                            <li class="sidebar-item">
+                                <a href="http://127.0.0.1:8000/me">My Account</a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+
+                
+            </div>
+            <div class="main-column col-sm-10">
+
+                <div class="page-content-wrapper">
+                    <!-- breadcrumbs -->
+                    <div class="page-breadcrumbs">
+
+                        <div class="breadcrumb-container container">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+
+
+                                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"
+                                        class="breadcrumb-item">
+                                        <a itemprop="item" href="http://127.0.0.1:8000/quotations">
+                                            <span itemprop="name">Quotations</span>
+                                            <meta itemprop="position" content="1">
+                                        </a>
+                                    </li>
+
+                                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"
+                                        class="breadcrumb-item active" aria-current="page">
+                                        <span itemprop="item">
+                                            <span itemprop="name">QTN-00007</span>
+                                            <meta itemprop="position" content="2">
+                                        </span>
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+
+                    </div>
+
+
+                    <main class="container my-4">
+                        <div class="page-header-wrapper">
+                            <div class="page-header">
+
+                                <h2 class="m-0">QTN-00007</h2>
+
+                            </div>
+
+
+                            <div class="page-header-actions-block">
+
+                                <div class="dropdown">
+                                    <button class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <span class="font-md">Actions</span>
+                                        <b class="caret"></b>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-right" role="menu" style="">
+
+                                        <a class="dropdown-item"
+                                            href="http://127.0.0.1:8000/printview?doctype=Quotation&amp;name=QTN-00007&amp;format=Standard"
+                                            target="_blank" rel="noopener noreferrer">
+                                            Print
+                                        </a>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="page_content">
+                            <div class="row transaction-subheading">
+                                <div class="col-6">
+                                    <span class="font-md indicator-pill blue">
+
+                                        Submitted
+
+                                    </span>
+                                </div>
+                                <div class="col-6 text-muted text-right small pt-3">
+                                    Sep 29, 2022
+
+                                </div>
+                            </div>
+
+                            <p class="small my-3">
+                                <b>philii</b>
+
+
+                            </p>
+
+
+
+                            <div class="order-container">
+                                <!-- items -->
+                                <table class="order-item-table w-100 table">
+                                    <thead class="order-items order-item-header">
+                                        <tr>
+                                            <th width="60%">
+                                                Item
+                                            </th>
+                                            <th class="text-right" width="20%">
+                                                Quantity
+                                            </th>
+                                            <th class="text-right" width="20%">
+                                                Amount
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr class="order-items">
+                                            <td>
+
+                                                <div class="row item_name_and_description">
+                                                    <div class="col-xs-4 col-sm-2 order-image-col">
+                                                        <div class="order-image">
+
+                                                            <div class="no-image-cart-item" style="min-height: 100px;">
+                                                                c
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-xs-8 col-sm-10">
+                                                        item-001
+                                                        <div class="text-muted small item-description">
+                                                            coffee
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </td>
+                                            <td class="text-right">
+                                                1.0
+
+                                            </td>
+                                            <td class="text-right">
+                                                Br 250.00
+                                                <p class="text-muted small">Rate:&nbsp;Br 250.00</p>
+                                            </td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                                <!-- taxes -->
+                                <div class="order-taxes d-flex justify-content-end">
+                                    <table>
+
+
+
+
+
+
+
+
+
+
+                                        <tbody>
+                                            <tr>
+                                                <th class="text-left item-grand-total" colspan="1">
+                                                    Grand Total
+                                                </th>
+                                                <th class="text-right item-grand-total totals" colspan="3">
+                                                    Br 250.00
+                                                </th>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+                    </main>
+                </div>
+
+                <div class="page-footer"></div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <footer class="web-footer">
+        <div class="container">
+            <div class="footer-logo-extension">
+                <div class="row">
+                    <div class="text-left col-md-6"></div>
+                    <div class="text-right col-md-6">
+                        <div class="input-group">
+                            <input aria-describedby="footer-subscribe-button" aria-label="Your email address..."
+                                class="form-control" id="footer-subscribe-email" placeholder="Your email address..."
+                                type="text">
+                            <div class="input-group-append">
+                                <button class="btn btn-sm btn-default" id="footer-subscribe-button" type="button">Get
+                                    Updates</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="row">
+                    <div class="footer-col-left col-sm-6"></div>
+                    <div class="footer-col-right col-sm-6"></div>
+                </div>
+            </div>
+            <div class="footer-info">
+                <div class="row">
+                    <div class="footer-col-left col-sm-6 col-12">
+
+                        © Across Technologies
+
+
+                    </div>
+                    <div class="footer-col-right col-sm-6 col-12 footer-powered">
+                        <a class="text-muted" href="https://erpnext.com/?source=website_footer" target="_blank">Powered
+                            by ERPNext</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+    <!-- js should be loaded in body! -->
+  
+    <script type="text/javascript" src="assets/across_marketplace/js/frappe-web.bundle.OTSOGXK3.js"></script>
+
+    <script type="text/javascript" src="assets/across_marketplace/js/website_script.js"></script>
+    <script type="text/javascript" src="assets/across_marketplace/js/erpnext-web.bundle.5LQH5I42.js"></script>
+   
+   
+
+    
+</body>
+
+</html>

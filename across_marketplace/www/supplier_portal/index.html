@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<!-- Built on Frappe. https://frappeframework.com/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="generator" content="frappe">
+
+
+    <meta name="title" content="PUR-RFQ-2022-00001">
+    <meta name="language" content="en">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="PUR-RFQ-2022-00001">
+    <meta name="twitter:title" content="PUR-RFQ-2022-00001">
+    <meta name="twitter:card" content="summary">
+
+
+    <title>PUR-RFQ-2022-00001</title>
+
+
+    <link rel="shortcut icon" href="http://127.0.0.1:8000/assets/erpnext/images/erpnext-favicon.svg"
+        type="image/x-icon">
+
+
+    <link rel="canonical" href="http://127.0.0.1:8000/rfq">
+    <link type="text/css" rel="stylesheet" href="assets/across_marketplace/css/website.bundle.YWPMVBTH.css">
+    <link type="text/css" rel="stylesheet" href="assets/across_marketplace/css/erpnext-web.bundle.3XZQWSHX.css">
+
+
+    <script>
+        window.frappe = {};
+        frappe.ready_events = [];
+        frappe.ready = function (fn) {
+            frappe.ready_events.push(fn);
+        }
+        window.dev_server = 1;
+        window.socketio_port = 9000;
+        window.show_language_picker = false;
+    </script>
+</head>
+
+<body>
+    
+
+    <nav class="navbar navbar-light navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="http://127.0.0.1:8000/">Across Technologies</a>
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-target="#navbarSupportedContent" data-toggle="collapse" type="button">
+                <span>
+                    <svg class="icon icon-lg">
+                        <use href="#icon-menu"></use>
+                    </svg>
+                </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="mr-auto navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/contact">
+                            Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/blog">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://127.0.0.1:8000/all-products">
+                            Products
+                        </a>
+                    </li>
+                </ul>
+                <ul class="ml-auto navbar-nav">
+                    <li class="shopping-cart cart-icon" style="display: none;">
+                        <a class="nav-link" href="http://127.0.0.1:8000/cart">
+                            <svg class="icon icon-lg">
+                                <use href="#icon-assets"></use>
+                            </svg>
+
+                        </a>
+                    </li>
+                    <div class="d-block d-lg-none">
+                        <hr>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/project">
+                                Projects
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/rfq">
+                                Request for Quotations
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/supplier-quotations">
+                                Supplier Quotation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/purchase-orders">
+                                Purchase Orders
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/purchase-invoices">
+                                Purchase Invoices
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/addresses">
+                                Addresses
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/newsletters">
+                                Newsletter
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-muted" href="http://127.0.0.1:8000/book_appointment">
+                                Appointment Booking
+                            </a>
+                        </li>
+                        <hr>
+                    </div>
+                    <!-- post login tools -->
+                    <li class="nav-item dropdown logged-in" data-label="website-post-login" id="website-post-login"
+                        style="">
+                        <a class="nav-link nav-avatar" data-toggle="dropdown" href="#">
+                            <span class="user-image-wrapper"><span class="avatar avatar-medium filterable" title="minte"
+                                    data-filter="_assign,like,%null%">
+                                    <div class="avatar-frame standard-image"
+                                        style="background-color: var(--blue-avatar-bg); color: var(--blue-avatar-color)">
+                                        m
+                                    </div>
+                                </span></span>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu"><a class="dropdown-item"
+                                href="http://127.0.0.1:8000/me" rel="nofollow">
+                                My Account
+                            </a><a class="dropdown-item" href="http://127.0.0.1:8000/?cmd=web_logout" rel="nofollow">
+                                Log out
+                            </a><a class="dropdown-item switch-to-desk hidden" href="http://127.0.0.1:8000/app">Switch
+                                To Desk</a>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn-login-area" href="http://127.0.0.1:8000/login"
+                            style="display: none;">Login</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="form-group mb-0 hide" id="language-switcher">
+                <select class="form-control"></select>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="row" id="page-rfq" data-path="rfq/PUR-RFQ-2022-00001">
+            <div class="sidebar-column col-sm-2">
+
+
+
+
+
+
+
+                <div class="web-sidebar">
+
+                    <div class="sidebar-items">
+                        <ul class="list-unstyled">
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/project" class="">
+                                    Projects
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/rfq" class="">
+                                    Request for Quotations
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/supplier-quotations" class="">
+                                    Supplier Quotation
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/purchase-orders" class="">
+                                    Purchase Orders
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/purchase-invoices" class="">
+                                    Purchase Invoices
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/addresses" class="">
+                                    Addresses
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/newsletters" class="">
+                                    Newsletter
+                                </a>
+                            </li>
+
+                            <li class="sidebar-item"><a href="http://127.0.0.1:8000/book_appointment" class="">
+                                    Appointment Booking
+                                </a>
+                            </li>
+
+                        </ul>
+
+
+                        <ul class="list-unstyled">
+                            <li class="sidebar-item">
+                                <a href="http://127.0.0.1:8000/me">My Account</a>
+                            </li>
+                        </ul>
+
+
+                    </div>
+                </div>
+
+                <script>
+                    frappe.ready(function () {
+                        $('.sidebar-item a').each(function (index) {
+                            const active_class = 'active'
+                            const non_active_class = ''
+                            let page_href = window.location.href;
+                            if (page_href.indexOf('#') !== -1) {
+                                page_href = page_href.slice(0, page_href.indexOf('#'));
+                            }
+                            if (this.href.trim() == page_href) {
+                                $(this).removeClass(non_active_class).addClass(active_class);
+                            } else {
+                                $(this).removeClass(active_class).addClass(non_active_class);
+                            }
+                        });
+
+                        // scroll the active sidebar item into view
+                        let active_sidebar_item = $('.sidebar-item a.active');
+                        if (active_sidebar_item.length > 0) {
+                            active_sidebar_item.get(0)
+                                .scrollIntoView({ behavior: "auto", block: "center", inline: "nearest" });
+                        }
+                    });
+                </script>
+
+            </div>
+            <div class="main-column col-sm-10">
+
+                <div class="page-content-wrapper">
+                    <!-- breadcrumbs -->
+                    <div class="page-breadcrumbs">
+
+                        <div class="breadcrumb-container container">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb" itemscope="" itemtype="http://schema.org/BreadcrumbList">
+
+
+                                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"
+                                        class="breadcrumb-item">
+                                        <a itemprop="item" href="http://127.0.0.1:8000/rfq">
+                                            <span itemprop="name">Request for Quotation</span>
+                                            <meta itemprop="position" content="1">
+                                        </a>
+                                    </li>
+
+                                    <li itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem"
+                                        class="breadcrumb-item active" aria-current="page">
+                                        <span itemprop="item">
+                                            <span itemprop="name">PUR-RFQ-2022-00001</span>
+                                            <meta itemprop="position" content="2">
+                                        </span>
+                                    </li>
+                                </ol>
+                            </nav>
+                        </div>
+
+                    </div>
+
+
+                    <main class="container my-4">
+                        <div class="page-header-wrapper">
+                            <div class="page-header">
+
+                                <h1>PUR-RFQ-2022-00001</h1>
+
+                            </div>
+
+
+                            <div class="page-header-actions-block">
+
+
+                                <button class="btn btn-primary btn-sm" type="button">
+                                    Submit</button>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="page_content">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="rfq-supplier">mintetes</div>
+                                </div>
+                                <div class="col-6 text-muted text-right h6">
+                                    29-09-2022
+                                </div>
+                            </div>
+                            <div class="rfq-content" style="margin-top:15px">
+                                <div id="order-container">
+                                    <div id="rfq-items">
+                                        <div class="row cart-item-header">
+                                            <div class="col-sm-5 col-12">
+                                                Items
+                                            </div>
+                                            <div class="col-sm-2 col-4 text-right">
+                                                Qty
+                                            </div>
+                                            <div class="col-sm-2 col-4 text-right">
+                                                Rate
+                                            </div>
+                                            <div class="col-sm-3 col-4 text-right">
+                                                Amount
+                                            </div>
+                                        </div>
+                                        <hr>
+
+                                        <div class="rfq-items">
+
+
+
+                                            <div class="rfq-item">
+                                                <div class="row">
+                                                    <div class="col-sm-5 col-12"
+                                                        style="margin-bottom: 10px;margin-top: 5px;">
+
+                                                        <div class="row">
+                                                            <div class="col-3">
+
+                                                                <div class="border text-center rounded product-image"
+                                                                    style="overflow: hidden;">
+
+                                                                    <div class="card-img-top no-image-item">
+                                                                        ?
+                                                                    </div>
+
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="col-9">
+                                                                item-001
+                                                                <p class="text-muted small">coffee</p>
+
+                                                                <p class="text-muted small supplier-part-no">
+
+                                                                </p>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <!-- <div class="col-sm-2 col-2" style="margin-bottom: 10px;">
+			<textarea type="text" style="margin-top: 5px;" class="input-with-feedback form-control rfq-offer_detail" ></textarea>
+		</div> -->
+                                                    <div class="col-sm-2 col-4 text-right">
+                                                        <input type="text" class="form-control text-right rfq-qty"
+                                                            style="margin-top: 5px;display: inline-block" value="1"
+                                                            data-idx="1">
+                                                        <p class="text-muted small" style="margin-top: 10px;">
+                                                            UOM:Nos
+                                                        </p>
+                                                    </div>
+                                                    <div class="col-sm-2 col-4 text-right">
+                                                        <input type="text" class="form-control text-right rfq-rate"
+                                                            style="margin-top: 5px;display: inline-block" value="0.00"
+                                                            data-idx="1">
+                                                    </div>
+                                                    <div class="col-sm-3 col-4 text-right" style="padding-top: 9px;">
+                                                        Br <span class="rfq-amount" data-idx="1">0.00</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row grand-total-row">
+                                        <div class="col-9 text-right">Grand Total</div>
+                                        <div class="col-3 text-right">
+                                            Br <span class="tax-grand-total">0.0</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row terms">
+                                        <div class="col-6">
+                                            <br><br>
+                                            <p class="text-muted small">Notes: </p>
+                                            <textarea class="form-control terms-feedback"
+                                                style="height: 100px;"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-5">
+                                        <div class="col-12">
+                                            <p class="text-muted small">Quotations: </p>
+
+                                            <div class="result">
+
+                                                <div class="web-list-item transaction-list-item quotations"
+                                                    idx="PUR-SQTN-2022-00001">
+                                                    <div class="row">
+                                                        <div class="col-sm-6">
+                                                            <span class="indicator gray">PUR-SQTN-2022-00001</span>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <span class="small gray">Submitted</span>
+                                                        </div>
+                                                        <div class="col-sm-3">
+                                                            <span class="small gray">29-09-2022</span>
+                                                        </div>
+                                                    </div>
+                                                    <a class="transaction-item-link"
+                                                        href="http://127.0.0.1:8000/supplier-quotations/PUR-SQTN-2022-00001">Link</a>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="page-footer"></div>
+                    </main>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="web-footer">
+        <div class="container">
+            <div class="footer-logo-extension">
+                <div class="row">
+                    <div class="text-left col-md-6"></div>
+                    <div class="text-right col-md-6">
+                        <div class="input-group">
+                            <input aria-describedby="footer-subscribe-button" aria-label="Your email address..."
+                                class="form-control" id="footer-subscribe-email" placeholder="Your email address..."
+                                type="text">
+                            <div class="input-group-append">
+                                <button class="btn btn-sm btn-default" id="footer-subscribe-button" type="button">Get
+                                    Updates</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="row">
+                    <div class="footer-col-left col-sm-6"></div>
+                    <div class="footer-col-right col-sm-6"></div>
+                </div>
+            </div>
+            <div class="footer-info">
+                <div class="row">
+                    <div class="footer-col-left col-sm-6 col-12">
+
+                        © Across Technologies
+
+
+                    </div>
+                    <div class="footer-col-right col-sm-6 col-12 footer-powered">
+                        <a class="text-muted" href="https://erpnext.com/?source=website_footer" target="_blank">Powered
+                            by ERPNext</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script data-web-template="Standard Footer">
+        frappe.ready(function () {
+            $("#footer-subscribe-button").click(function () {
+
+                if ($("#footer-subscribe-email").val() && validate_email($("#footer-subscribe-email").val())) {
+                    $("#footer-subscribe-email").attr('disabled', true);
+                    $("#footer-subscribe-button").html("Sending...")
+                        .attr("disabled", true);
+                    erpnext.subscribe_to_newsletter({
+                        email: $("#footer-subscribe-email").val(),
+                        callback: function (r) {
+                            if (!r.exc) {
+                                $("#footer-subscribe-button").html(__("Added"))
+                                    .attr("disabled", true);
+                            } else {
+                                $("#footer-subscribe-button").html(__("Error: Not a valid id?"))
+                                    .addClass("btn-danger").attr("disabled", false);
+                                $("#footer-subscribe-email").val("").attr('disabled', false);
+                            }
+                        }
+                    });
+                }
+                else
+                    frappe.msgprint(frappe._("Please enter valid email address"))
+            });
+        });
+    </script>
+    <!-- js should be loaded in body! -->
+    <script>
+        frappe.boot = { 'sysdefaults': { 'float_precision': 3, 'date_format': 'dd-mm-yyyy', 'time_format': 'HH:mm:ss' }, 'time_zone': { 'system': 'Africa/Addis_Ababa', 'user': 'Africa/Addis_Ababa' } }
+        // for backward compatibility of some libs
+        frappe.sys_defaults = frappe.boot.sysdefaults;
+    </script>
+    <script type="text/javascript" src="assets/across_marketplace/js/frappe-web.bundle.OTSOGXK3.js"></script>
+    <script type="text/javascript" src="assets/across_marketplace/js/website_script.js"></script>
+    <script type="text/javascript" src="assets/across_marketplace/js/erpnext-web.bundle.5LQH5I42.js"></script>
+    <script>// Copyright (c) 2015, Frappe Technologies Pvt. Ltd. and Contributors
+        // License: GNU General Public License v3. See license.txt
+
+        window.doc = {
+            "amended_from": null,
+            "company": "Across Technologies",
+            "creation": "2022-09-29 13:31:27.969958",
+            "docstatus": 1,
+            "doctype": "Request for Quotation",
+            "email_template": null,
+            "idx": 0,
+            "items": [
+                {
+                    "brand": null,
+                    "conversion_factor": 1.0,
+                    "creation": "2022-09-29 13:31:27.969958",
+                    "description": "coffee",
+                    "docstatus": 1,
+                    "doctype": "Request for Quotation Item",
+                    "idx": 1,
+                    "image": "",
+                    "item_code": "item-001",
+                    "item_group": "All Item Groups",
+                    "item_name": "coffee",
+                    "material_request": null,
+                    "material_request_item": null,
+                    "modified": "2022-09-29 16:40:17.068669",
+                    "modified_by": "Administrator",
+                    "name": "9eb02c53ce",
+                    "owner": "Administrator",
+                    "page_break": 0,
+                    "parent": "PUR-RFQ-2022-00001",
+                    "parentfield": "items",
+                    "parenttype": "Request for Quotation",
+                    "project_name": null,
+                    "qty": 1.0,
+                    "schedule_date": "2022-09-29",
+                    "stock_qty": 1.0,
+                    "stock_uom": "Nos",
+                    "supplier_part_no": null,
+                    "uom": "Nos",
+                    "warehouse": "Stores - AT"
+                }
+            ],
+            "letter_head": null,
+            "message_for_supplier": "Please supply the specified items at the best possible rates",
+            "modified": "2022-09-29 16:40:32.844650",
+            "modified_by": "Administrator",
+            "name": "PUR-RFQ-2022-00001",
+            "naming_series": "PUR-RFQ-.YYYY.-",
+            "opportunity": null,
+            "owner": "Administrator",
+            "salutation": null,
+            "schedule_date": null,
+            "select_print_heading": null,
+            "status": "Submitted",
+            "subject": null,
+            "suppliers": [
+                {
+                    "contact": "minte",
+                    "creation": "2022-09-29 13:31:27.969958",
+                    "docstatus": 1,
+                    "doctype": "Request for Quotation Supplier",
+                    "email_id": "mtsadiku@gmail.com",
+                    "email_sent": 1,
+                    "idx": 1,
+                    "modified": "2022-09-29 16:44:44.023760",
+                    "modified_by": "Administrator",
+                    "name": "b2c2f95d77",
+                    "owner": "Administrator",
+                    "parent": "PUR-RFQ-2022-00001",
+                    "parentfield": "suppliers",
+                    "parenttype": "Request for Quotation",
+                    "quote_status": "Received",
+                    "send_email": 1,
+                    "supplier": "mintetes",
+                    "supplier_name": "mintetes"
+                }
+            ],
+            "tc_name": null,
+            "terms": null,
+            "transaction_date": "2022-09-29",
+            "vendor": null
+        };
+
+        $(document).ready(function () {
+            new rfq();
+            doc.supplier = "mintetes"
+            doc.currency = "ETB"
+            doc.number_format = "#,###.##"
+            doc.buying_price_list = ""
+        });
+
+        rfq = class rfq {
+            constructor() {
+                this.onfocus_select_all();
+                this.change_qty();
+                this.change_rate();
+                this.terms();
+                this.submit_rfq();
+                this.navigate_quotations();
+            }
+
+            onfocus_select_all() {
+                $("input").click(function () {
+                    $(this).select();
+                })
+            }
+
+            change_qty() {
+                var me = this;
+                $('.rfq-items').on("change", ".rfq-qty", function () {
+                    me.idx = parseFloat($(this).attr('data-idx'));
+                    me.qty = parseFloat($(this).val()) || 0;
+                    me.rate = parseFloat($(repl('.rfq-rate[data-idx=%(idx)s]', { 'idx': me.idx })).val());
+                    me.update_qty_rate();
+                    $(this).val(format_number(me.qty, doc.number_format, 2));
+                })
+            }
+
+            change_rate() {
+                var me = this;
+                $(".rfq-items").on("change", ".rfq-rate", function () {
+                    me.idx = parseFloat($(this).attr('data-idx'));
+                    me.rate = parseFloat($(this).val()) || 0;
+                    me.qty = parseFloat($(repl('.rfq-qty[data-idx=%(idx)s]', { 'idx': me.idx })).val());
+                    me.update_qty_rate();
+                    $(this).val(format_number(me.rate, doc.number_format, 2));
+                })
+            }
+
+            terms() {
+                $(".terms").on("change", ".terms-feedback", function () {
+                    doc.terms = $(this).val();
+                })
+            }
+
+            update_qty_rate() {
+                var me = this;
+                doc.grand_total = 0.0;
+                $.each(doc.items, function (idx, data) {
+                    if (data.idx == me.idx) {
+                        data.qty = me.qty;
+                        data.rate = me.rate;
+                        data.amount = (me.rate * me.qty) || 0.0;
+                        $(repl('.rfq-amount[data-idx=%(idx)s]', { 'idx': me.idx })).text(format_number(data.amount, doc.number_format, 2));
+                    }
+
+                    doc.grand_total += flt(data.amount);
+                    $('.tax-grand-total').text(format_number(doc.grand_total, doc.number_format, 2));
+                })
+            }
+
+            submit_rfq() {
+                $('.btn-sm').click(function () {
+                    frappe.freeze();
+                    frappe.call({
+                        type: "POST",
+                        method: "erpnext.buying.doctype.request_for_quotation.request_for_quotation.create_supplier_quotation",
+                        args: {
+                            doc: doc
+                        },
+                        btn: this,
+                        callback: function (r) {
+                            frappe.unfreeze();
+                            if (r.message) {
+                                $('.btn-sm').hide()
+                                window.location.href = "/supplier-quotations/" + encodeURIComponent(r.message);
+                            }
+                        }
+                    })
+                })
+            }
+
+            navigate_quotations() {
+                $('.quotations').click(function () {
+                    name = $(this).attr('idx')
+                    window.location.href = "/quotations/" + encodeURIComponent(name);
+                })
+            }
+        }</script>
+
+    <script>frappe.csrf_token = "None";</script>
+</body>
+
+</html>

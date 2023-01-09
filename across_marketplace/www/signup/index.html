@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>marketplace login</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css">
+	<link rel="stylesheet" href="/assets/across_marketplace/css/style.css">
+	<script src="/assets/across_marketplace/js/style.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+
+</head>
+
+<body>
+	
+	<h2>Across Marketplace</h2>
+
+	<div class="container" id="container">
+		<div class="form-container sign-up-container">
+			<form>
+				<div>
+					<h1>Sign up as company</h1>
+					<span>or use your email for registration</span>
+
+					<div>
+						<select class="fright" name="cars" id="cars">
+							<option value="volvo">Customer</option>
+							<option value="saab">Supplier</option>
+
+						</select>
+					</div>
+					<input type="text" placeholder="Company Name">
+					<div class="flexys">
+						<div class="flexy">
+							<input class="input150" type="email" placeholder="Company Email">
+						</div>
+						<div class="flexy">
+							<input class="input150" type="text" placeholder="Phone number">
+						</div>
+					</div>
+					<input type="password" placeholder="Password">
+					<input type="text" placeholder="Tin number">
+					<button>Sign Up as a company</button>
+				</div>
+			</form>
+		</div>
+		<div class="form-container sign-in-container">
+			<form id="form-signup-individual">
+
+				<div>
+					<h1>Sign up as individual</h1>
+
+					<span>or use your email for registration</span>
+
+					<!-- select user type customer | supplier  -->
+					<div>
+						<select class="fright" name="cars" id="customerType">
+							<option value="Customer">Customer</option>
+							<option value="Supplier">Supplier</option>
+						</select>
+					</div>
+
+					<div class="flexys">
+						<div class="flexy">
+							<input class="input150" type="text" id="name" placeholder="First name">
+						</div>
+						<div class="flexy">
+							<input class="input150" type="text" placeholder="Last name">
+						</div>
+					</div>
+					<div class="flexys">
+						<div class="flexy">
+							<input class="input150" type="email" id="email" placeholder="Email">
+						</div>
+						<div class="flexy">
+							<input class="input150" type="text" id="mobile_no" placeholder="Phone number">
+						</div>
+					</div>
+					<!-- <input type="password" placeholder="Password"> -->
+
+				</div>
+
+
+				<button type="submit">Sign up as individual</button>
+			</form>
+		</div>
+		<div class="overlay-container">
+			<div class="overlay">
+				<div class="overlay-panel overlay-left">
+					<h1>Sign up as an Individual</h1>
+					<p>To keep connected with us please login with your personal info</p>
+					<button class="ghost" id="signIn">Sign up as an Individual</button>
+				</div>
+				<div class="overlay-panel overlay-right">
+					<h1>Sign up as a company ? </h1>
+					<p>Enter your company details and start journey with us</p>
+					<button class="ghost" id="signUp">Sign Up as a company</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		const signUpButton = document.getElementById('signUp');
+		const signInButton = document.getElementById('signIn');
+		const container = document.getElementById('container');
+
+		signUpButton.addEventListener('click', () => {
+			// alert("right pane touched");
+			container.classList.add("right-panel-active");
+		});
+
+		signInButton.addEventListener('click', () => {
+			container.classList.remove("right-panel-active");
+		});
+	</script>
+
+	<script>
+		
+		
+
+		($("#form-signup-individual")).on("submit", function (event) {
+			console.log("this is the csrf token .... "+"{{csrf_token}}")
+			csrf_token="{{csrf_token}}"
+			event.preventDefault();
+			var args = {};
+			args.cmd = "frappe.core.doctype.user.user.sign_up";
+			args.email = ($("#email").val() || "").trim();
+			args.full_name = ($("#name").val() || "").trim();
+			args.customer_name = args.full_name = ($("#name").val() || "").trim();
+			//manually typed definitions 
+			args.customer_group = "All Customer Groups"
+			customer_type =  ($("#customerType").val() || "").trim();
+			args.territory = "All Territories"
+			args.mobile_no = ($("#mobile_no").val() || "").trim();
+
+			if (customer_type == "Customer") {
+				console.log("This is customer user ")
+				var params = {
+                customer_name: args.customer_name,
+                customer_type: args.customer_type,
+                customer_group: "All Customer Groups",
+                territory: "All Territories",
+                                     
+        }
+
+			console.log(args.email + "just registered")
+
+
+
+			fetch('/api/method/frappe.core.doctype.user.user.sign_up?' + new URLSearchParams({
+
+				email: args.email,
+				full_name: args.full_name,
+				redirect_to: "app"
+			}),
+				{
+					method: 'GET',
+					headers: {
+						'Accept': 'application/json',
+						'Content-Type': 'application/json',
+					},
+				})
+				.then(r => r.json())
+				.then(r => {
+
+					console.log(r+"this is response from r")
+					if (r.message[0]) {
+
+						// console.log($("#bold").val())
+						$("#bold").text("Succesful");
+						$("#message").text("Succesful Please Check Your Email");
+						setTimeout(function () {
+							$('#myModal').modal();
+						}, 1000);
+
+						//since the user creation succeded create grant role customer  
+
+						fetch('/api/method/across_marketplace.api.signupapi.grant_customer_role?' +
+							new URLSearchParams({
+								email: args.email,
+
+							}), {
+							method: 'GET',
+							headers: {
+								'Accept': 'application/json',
+								'Content-Type': 'application/json',
+							}
+						}
+
+						).then(res => res.json())
+							.then(data => console.log("I'm successfull"))
+							
+							.then(res => {
+								
+									console.log("granting permission succeded now creating new customer ...")
+									// if granting customer succeded create customer 
+									fetch('api/resource/Customer', {
+										method: "POST",
+										headers: {
+											'Content-Type': 'application/json',
+											'X-Frappe-CSRF-Token': "{{csrf_token}}",
+										},
+										body:JSON.stringify(params)
+										
+									})
+									.then(res=>res.json())
+									.then( res => {
+										if(res.ok){
+											console.log(res)
+										}
+									}
+										
+									)
+								
+							})
+					}
+
+
+
+
+
+
+					else if (r.message[1] == "Already Registered") {
+						console.log($("#bold").val())
+
+						$("#bold").text("Failed");
+						$("#message").text("Failed Already Registered!");
+						setTimeout(function () {
+							$('#myModal').modal();
+						}, 1000);
+					}
+				})
+				.catch(err => {
+					console.log(err);
+				})
+			return false;
+			}
+		});
+
+		// for company registration 
+
+	</script>
+
+
+
+
+</body>
+
+</html>
